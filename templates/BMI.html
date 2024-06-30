@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}
+GeoFitness
+{% endblock %}
+{% block body %}
+
+
+<form method="post">
+    {{form.hidden_tag()}}
+    <div class="container text-start mt-3 bg-dark text-white pb-2">
+        <div class="container-md ">
+            <h2>Enter your weight and height </h2>
+            {{form.weight (class='form-control', placeholder='Enter Weight (KG)')}}<br>
+            {{form.height (class='form-control', placeholder='Enter Height (M)')}} <br> <br>
+            {{form.submit}} <br> <br>
+            {% if rezultati == True %}
+            <h3>Your BMI is {{bmi}} </h3>
+            {% endif %}
+        </div>
+    </div>
+</form>
+{% endblock %}

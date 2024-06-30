@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}
+Push Day
+{% endblock %}
+
+{% block body %}
+
+<div class="container-md align-center">
+    <div class="col bg-transparent">
+        <div class="row bg-transparent text-white">
+            <h2> Monday: Push </h2>
+            <div class="list-group">
+                <ul class="list-group">
+                <li class="list-group-item active" aria-current="true">Chest Exercises</li>
+                <a href="/inclinebench" class="list-group-item list-group-item-action">Dumbbell incline bench</a>
+                    <a href="/barbellbench" class="list-group-item list-group-item-action">Barbell bench/Barbell smith machine bench </a>
+                    <li class="list-group-item active" aria-current="true">Triceps Exercises</li>
+                <a href="/triceppushdown" class="list-group-item list-group-item-action">Cable tricep pushdowns</a>
+                <a href="/tricepdbextensions" class="list-group-item list-group-item-action">Dumbbell tricep overhead extension</a>
+                <li class="list-group-item active" aria-current="true">Front Delt Exercises</li>
+                <a href="/overheadbarbell" class="list-group-item list-group-item-action">Barbell Overhead (Militray) Press</a>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

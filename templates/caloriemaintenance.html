@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}
+Calorie Maintenance Calculator
+{% endblock %}
+
+{% block body %}
+<form method="post">
+{{form.hidden_tag()}}
+<section class="">
+    <form method="post">
+        <div class="px-3 py-5 px-md-5 text-center text-lg-start mt-5">
+            <div class="container">
+                <div class="align-items-center mx-auto" align="center">
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <h3> Calorie maintenance calculator (BMR Calculator) </h3>
+                        <div class="col-md-6 mb-4">
+                            <div data-mdb-input-init class="form-outline">
+                                {{form.age(class='form-control', placeholder='Input Age')}}
+                                <div data-mdb-input-init class="form-outline">
+                                    {{form.weight(class='form-control', placeholder='Input Weight(KG)')}}
+                                    <div data-mdb-input-init class="form-outline">
+                                        {{form.height(class='form-control', placeholder='Input Height(CM)')}}
+                                    </div>
+                                    {{form.submit}}
+                                    {% if result==True %}
+                                    <h3>Your Basal Metabolic Rate is {{calories}}</h3>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>
+</form>
+
+
+{% endblock %}

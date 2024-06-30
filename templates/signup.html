@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}
+Sign Up
+{% endblock %}
+{% block body %}
+
+<form method="post">
+    {{form.hidden_tag()}}
+    <section class="">
+        <div class="px-3 py-5 px-md-5 text-center text-lg-start mt-5">
+            <div class="container">
+                <div class="align-items-center mx-auto" align="center">
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <div class="card">
+                            <div class="card-body py-5 px-md-5 bg-dark text-white">
+                                <form>
+                                    <div class="row">
+                                        {% if username_taken == False %}
+                                        <div class="success">
+                                            <p>Successfully signed up </p>
+                                        </div>
+                                        {% elif username_taken == True %}
+                                        <div class="danger">
+                                            <p>This user already exists </p>
+                                        </div>
+                                        {% endif %}
+                                        <div class="col-md-6 mb-4">
+                                            <div data-mdb-input-init class="form-outline">
+                                                {{form.firstname (class='form-control', placeholder='First name')}}
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div data-mdb-input-init class="form-outline">
+                                                {{form.lastname (class='form-control', placeholder='Last name')}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-mdb-input-init class="form-outline mb-4">
+                                        {{form.email (class='form-control', placeholder='E-mail')}}
+                                        </label>
+                                    </div>
+
+                                    <div data-mdb-input-init class="form-outline mb-4">
+                                        {{form.password (class='form-control', placeholder='Password')}}
+                                        </label>
+                                    </div>
+                                    </label>
+                                    <div>
+                                        {{form.submit}}
+                                    </div>
+
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</form>
+
+{% endblock %}
+

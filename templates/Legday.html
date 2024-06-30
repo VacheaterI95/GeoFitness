@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}
+Leg Day
+{% endblock %}
+
+{% block body %}
+
+<div class="container-md align-center">
+    <div class="col bg-transparent">
+        <div class="row bg-transparent text-white">
+            <h2> Saturday: Legs </h2>
+            <div class="list-group">
+                <ul class="list-group">
+                <li class="list-group-item active" aria-current="true">Isolation Exercises</li>
+                <a href="/legextensions" class="list-group-item list-group-item-action">Leg extensions</a>
+                    <a href="/hamstringcurls" class="list-group-item list-group-item-action">Lying hamstring curls </a>
+                    <li class="list-group-item active" aria-current="true">Compound exercises</li>
+                <a href="/squats" class="list-group-item list-group-item-action">Barbell squats</a>
+                <a href="/hipthrustsrdls" class="list-group-item list-group-item-action">Hip thrusts/Romanian deadlifts</a>
+                <li class="list-group-item active" aria-current="true">Calf Exercises </li>
+                <a href="/standcalf" class="list-group-item list-group-item-action">Standing calf raises</a>
+                    <a href="/seatedcalf" class="list-group-item list-group-item-action">Seated calf raises</a>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

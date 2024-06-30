@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}
+Schedule
+{% endblock %}
+
+{% block body %}
+<div class="container-md align-center">
+    <div class="col bg-transparent text-white text-center ">
+        <h1>But first choose your schedule</h1> <br>
+        <div class="card-group">
+            <div class="card">
+                <img class="card-img-top" src="/static/images/bodibilding.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">3 Day Schedule</h5>
+                    <p class="card-text">This is a 3 day schedule, it is versatile so you can change up the days a bit.</p>
+                    <p class="card-text"><small class="text-muted">Better for beginners lifters</small></p>
+                    <a href="/bodybuilding3" class="btn btn-primary stretched-link">Get the program</a>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="/static/images/bodibilding.png" alt="Card image cap" >
+                <div class="card-body">
+                    <h5 class="card-title">6 Day schedule</h5>
+                    <p class="card-text">This is a 6 day schedule and you shouldn't change it up.</p>
+                    <p class="card-text"><small class="text-muted">Better for intermediate (3 months+) lifters and above</small></p>
+                    <a href="/bodybuilding6" class="btn btn-primary stretched-link">Get the program</a>
+                </div>
+            </div>
+
+
+            {% endblock %}
